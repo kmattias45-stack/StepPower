@@ -1,0 +1,30 @@
+Algoritmo step_power
+		Definir zona_step_power Como Logico
+		Definir pasos_acumulados Como Entero
+		
+		// 1. Abrir la aplicaci�n y autenticarse
+		Escribir "Abriendo la aplicaci�n..."
+		Escribir "�Est� registrado o desea iniciar sesi�n?"
+		
+		// 2. Simular lectura de datos del usuario
+		Escribir "�Se encuentra en una zona de Step Power? (Verdadero/Falso):"
+		Leer zona_step_power
+		
+		Si zona_step_power Entonces
+			Escribir "Ingrese sus pasos acumulados del d�a:"
+			Leer pasos_acumulados
+			
+			Si pasos_acumulados >= 7500 Entonces
+				Escribir "�Felicitaciones! Ha desbloqueado un descuento del 2%."
+			SiNo
+				Escribir "A�n no alcanza la meta. Pasos faltantes para el descuento: ", (7500 - pasos_acumulados)
+			FinSi
+		SiNo
+			Escribir "Pasos no registrados: No se encuentra en una zona de Step Power."
+		FinSi
+		
+		// 3. Mostrar estad�sticas generales
+		Escribir "Cargando y mostrando estad�sticas de su sesi�n..."
+		
+FinAlgoritmo
+
